@@ -421,7 +421,6 @@ Iterable<T>
 public interface StudentRepository extends CrudRepository<Student, Integer>
 
 ```
-
 #### Query-Annotated Query Method
 ```
 @Query("JPQL Query String")
