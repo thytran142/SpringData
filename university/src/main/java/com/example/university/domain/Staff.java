@@ -1,5 +1,6 @@
 package com.example.university.domain;
 
+// Begin Mongo DB: Each entity is a @Document
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -23,6 +24,30 @@ public class Staff {
 
     public Integer getId() {
         return id;
+//Begin Normal JDBC
+import javax.persistence.*;
+import javax.persistence.Id;
+
+/**
+ * JPA Entity representing a staff member of a department.
+ *
+ * Created by maryellenbowman
+ */
+@Entity
+@Table(name="Staff_member")
+public class Staff {
+    @Id
+    @GeneratedValue
+    private Integer id;
+
+    @Embedded
+    private Person member;
+
+    public Staff(Person member) {
+        this.member = member;
+    }
+
+    protected Staff() {
     }
 
     public Person getMember() {

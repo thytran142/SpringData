@@ -10,7 +10,6 @@
 
 	<name>university</name>
 	<description>MongoDb university project for Spring Boot</description>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -27,6 +26,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+<!-- Reactive Mongo DB-->
 			<artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
 		</dependency>
 
@@ -46,7 +46,20 @@
 			<version>3.0.7.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
-
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+<!-- JDBC with h2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+<!--end dependency for JDBC-->
 	</dependencies>
 
 	<build>
