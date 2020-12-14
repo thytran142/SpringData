@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6e0aa159-17ee-45c0-b382-30d735814f16" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lRNSpE71nv5CsOux7uePg3Xs1u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/university" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e0aa159-17ee-45c0-b382-30d735814f16" name="Default Changelist" comment="" />
+      <created>1607555945095</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607555945095</updated>
+      <workItem from="1607555946723" duration="1196000" />
+      <workItem from="1607612354866" duration="6383000" />
+      <workItem from="1607636853967" duration="431000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1607635753174">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="0" key="CommitChangelistDialog2/-1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1607635753174" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607636082575">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/-1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1607636082575" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1607636030176">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/-1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1607636030176" />
+    <state x="435" y="33" key="new project wizard" timestamp="1607636011429">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="435" y="33" key="new project wizard/-1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1607636011429" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607956901925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1607956901925" />
+  </component>
+</project>
