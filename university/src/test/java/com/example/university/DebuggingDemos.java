@@ -1,15 +1,13 @@
 package com.example.university;
 
 import com.example.university.domain.Course;
-import com.example.university.repo.CourseRepository;
+import com.example.university.repo.CourseQueryRepository;
 import com.example.university.view.CourseView;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.List;
 
 /**
  * Created by maryellenbowman.
@@ -20,7 +18,7 @@ import java.util.List;
 public class DebuggingDemos {
 
     @Autowired
-    private CourseRepository courseRepository;
+    private CourseQueryRepository courseRepository;
 
     /**
      * Common Mistakes, Uncomment to debug
@@ -31,10 +29,15 @@ public class DebuggingDemos {
     @Test
     public void runtimeErrors() {
 
-//        Course course = courseRepository.findByDeptName("Sciences");
-//
-//        Course view = courseRepository.getCourseViewByName("English 101");
+        Course course = courseRepository.findByDepartmentName("Sciences");
 
+        //Various ways to leverage the Optional
+        CourseView view = courseRepository.getCourseViewByName("English 101").get();
+        view = courseRepository.getCourseViewByName("English 101").orElseThrow();
+        view = courseRepository.getCourseViewByName("English 100").orElse(
+                new CourseView("dummyCourse",
+                        "Bad Instructor",
+                        "No Department"));
     }
 
 

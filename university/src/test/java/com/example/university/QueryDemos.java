@@ -4,10 +4,7 @@ import com.example.university.domain.Course;
 import com.example.university.domain.Department;
 import com.example.university.domain.Person;
 import com.example.university.domain.Staff;
-import com.example.university.repo.CourseRepository;
-import com.example.university.repo.DepartmentRepository;
-import com.example.university.repo.StaffRepository;
-import com.example.university.repo.StudentRepository;
+import com.example.university.repo.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,13 +24,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class QueryDemos {
     @Autowired
-    StudentRepository studentRepository;
+    StudentQueryRepository studentRepository;
 
     @Autowired
     StaffRepository staffRepository;
 
     @Autowired
-    CourseRepository courseRepository;
+    CourseQueryRepository courseRepository;
 
     @Autowired
     DepartmentRepository departmentRepository;
@@ -112,17 +109,18 @@ public class QueryDemos {
 
 
         //*******Complex Queries********
-        Course english101 = courseRepository.findByName("English 101");
+        //Leverage Optional.ifPresent to avoid null checks
+        courseRepository.findByName("English 101").ifPresent(english101 -> {
+            //Select c from Course c join c.prerequisites p where p.id = ?1
+            System.out.println("\nFind Courses where English 101 is a prerequisite");
+            courseRepository.findCourseByPrerequisite(english101.getId())
+                    .forEach(System.out::println);
 
-        //Select c from Course c join c.prerequisites p where p.id = ?1
-        System.out.println("\nFind Courses where English 101 is a prerequisite");
-        courseRepository.findCourseByPrerequisite(english101.getId())
-                .forEach(System.out::println);
-
-        //Select new com.example.university.view.CourseView
-        //  (c.name, c.instructor.member.lastName, c.department.name) from Course c where c.id=?1
-        System.out.println("\nCourseView for English 101 \n" +
-                courseRepository.getCourseView(english101.getId()));
+            //Select new com.example.university.view.CourseView
+            //  (c.name, c.instructor.member.lastName, c.department.name) from Course c where c.id=?1
+            System.out.println("\nCourseView for English 101 \n" +
+                    courseRepository.getCourseView(english101.getId()));
+        });
     }
 
     /**
